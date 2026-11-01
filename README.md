@@ -9,6 +9,13 @@ Official replication package and working research prototype for the manuscript:
 **"Transformer-Based Semantic Deobfuscation: Using Large Language Models to Reconstruct Behavioral Logic from Obfuscated Malware Scripts"**  
 Submitted to **ACM Transactions on Privacy and Security (ACM TOPS)**.
 
+> [!TIP]
+> **Complete Reproducibility Archive (Pre-Packaged Dataset & Artifacts)**:  
+> Because the raw Kaggle MPSD corpus contains over 4,300+ individual scripts (exceeding standard repository file upload constraints), the complete, self-contained replication archive is published as an official release asset:  
+> 📦 **[Download `SEMANTIC_DEOBFUSCATION_REPRODUCIBILITY_PACKAGE.zip` from GitHub Releases](../../releases)** *(22.90 MB)*  
+> Unzipping this archive directly into the project root instantly restores all code, manifests, figures, benchmark payloads, and evaluation suites without needing to download thousands of loose files.
+
+
 ---
 
 ## 1. Directory Structure
@@ -31,8 +38,10 @@ Deobsucation/
 │   ├── dossier_generator.py                   # Forensic JSON dossier assembly & latency profiler
 │   └── cli.py                                 # Command-line interface
 ├── data/
-│   ├── raw/                                   # Downloaded raw script samples (Kaggle MPSD)
-│   ├── processed/                             # Deduplicated, stratified, partitioned benchmark
+│   ├── raw/                                   # Optional raw scraped corpus (excluded from Git repo)
+│   ├── processed/                             # Pre-packaged self-contained JSON manifests (< 100 files total)
+│   │   ├── benchmark_test_samples.json        # 100 benchmark test specimens with full code payload
+│   │   ├── training_manifest_1909.json        # 1,909 authentic training specimens with code
 │   │   ├── dataset_split_manifest.json        # Test/train partition hashes (0.0% leakage guarantee)
 │   │   └── test_predictions_ground_truth.csv # Ground truth labels and predictions
 │   └── DATASET_PROVENANCE.md                  # Provenance, licensing, versions, and sample stats
@@ -115,7 +124,11 @@ The experimental benchmark utilizes the **Malicious PowerShell Script Dataset (M
 - **Training Set ($N = 1,909$)**: Exclusively used to train baseline ML models (1,909 deduplicated unique specimens)
 - **Data Leakage**: **0.0%** ($\text{Test Hashes} \cap \text{Train Hashes} = \emptyset$)
 
-Details on methodology and licensing are documented in [`data/DATASET_PROVENANCE.md`](data/DATASET_PROVENANCE.md).
+### 📦 Dataset Distribution Notice & Quickstart
+To prevent repository bloat and comply with GitHub's file count limits (avoiding 4,300+ loose scripts in the Git tree):
+1. **Pre-Packaged Self-Contained Manifests**: Both the 100 benchmark test specimens (`benchmark_test_samples.json`) and the 1,909 training specimens (`training_manifest_1909.json`) are already pre-packaged as single JSON manifests with complete code payloads in `data/processed/`. You can immediately execute all benchmark evaluations without downloading raw files!
+2. **Official Reproducibility Archive**: The full standalone package including all manuscripts, preprints, test specimens, and logs is available directly in the [GitHub Releases](../../releases) section as `SEMANTIC_DEOBFUSCATION_REPRODUCIBILITY_PACKAGE.zip` (22.90 MB).
+3. **Raw Corpus Download (Optional)**: If you wish to re-ingest the raw 4,336 scripts from Kaggle, follow the setup steps in [`data/DATASET_PROVENANCE.md`](data/DATASET_PROVENANCE.md).
 
 ---
 
@@ -209,9 +222,10 @@ python create_reproducibility_package.py
 
 ## 8. Author & Venue Details
 
-- **Author**: Saba Firdous\* (`saba.firdous@riphahfsd.edu.pk`)
-- **Affiliation**: Department of Computing, Faculty of Computing, Riphah International University, Faisalabad, Pakistan
-- **Role**: Corresponding Author (\*)
+- **Authors**:
+  - **Saba Firdous\*** (`saba.firdous@riphahfsd.edu.pk`) - *First & Corresponding Author*
+  - **Shoaib Arshad** (`31973@riphahfsd.edu.pk`) - *Second Author*
+- **Affiliation**: Department of Computing, Riphah International University, Faisalabad, Pakistan
 - **Target Venue**: ACM Transactions on Privacy and Security (ACM TOPS)
 - **Year**: 2026
 
