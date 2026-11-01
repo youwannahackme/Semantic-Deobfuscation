@@ -1,5 +1,6 @@
 # Transformer-Based Semantic Deobfuscation: Prototype & Experimental Evaluation
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/youwannahackme/Semantic-Deobfuscation)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Venue: ACM TOPS](https://img.shields.io/badge/Venue-ACM%20TOPS-red.svg)](https://tops.acm.org/)
@@ -12,7 +13,7 @@ Submitted to **ACM Transactions on Privacy and Security (ACM TOPS)**.
 > [!TIP]
 > **Complete Reproducibility Archive (Pre-Packaged Dataset & Artifacts)**:  
 > Because the raw Kaggle MPSD corpus contains over 4,300+ individual scripts (exceeding standard repository file upload constraints), the complete, self-contained replication archive is published as an official release asset:  
-> 📦 **[Download `SEMANTIC_DEOBFUSCATION_REPRODUCIBILITY_PACKAGE.zip` from GitHub Releases](../../releases)** *(22.90 MB)*  
+> 📦 **[Download `SEMANTIC_DEOBFUSCATION_REPRODUCIBILITY_PACKAGE.zip` from GitHub Releases](https://github.com/youwannahackme/Semantic-Deobfuscation/releases)** *(22.90 MB)*  
 > Unzipping this archive directly into the project root instantly restores all code, manifests, figures, benchmark payloads, and evaluation suites without needing to download thousands of loose files.
 
 
@@ -67,16 +68,10 @@ Deobsucation/
 │   ├── RESEARCH_PROJECT_AUDIT_REPORT.md       # Comprehensive system audit report
 │   ├── RESEARCH_NOVELTY_ASSESSMENT.md         # Academic novelty and differentiation review
 │   └── DATASET_PROVENANCE_AND_QUALITY_ASSESSMENT.md # Dataset quality audit
-├── tests/
-│   ├── test_prototype.py                      # 7 core unit tests for engine modules
-│   └── test_pipeline.py                      # 4 end-to-end integration and mathematical audit tests
-├── build_deobfuscation_docx.py                # Academic DOCX builder with single-line captions
-├── generate_deobfuscation_figures.py          # Dynamic figure generator reflecting metrics.json
-├── prepare_deobfuscation_bib.py               # 85-entry contemporary reference builder
-├── verify_experimental_results.py             # Independent mathematical & audit verifier
-├── verify_deobfuscation_checklist.py          # ACM TOPS Master Checklist compliance auditor
-├── create_reproducibility_package.py          # Clean release archive packager
-└── SEMANTIC_DEOBFUSCATION_REPRODUCIBILITY_PACKAGE.zip # Complete release package
+└── tests/
+    ├── test_prototype.py                      # 7 core unit tests for engine modules
+    ├── test_pipeline.py                       # 4 end-to-end integration and mathematical audit tests
+    └── test_robustness_security.py            # 8 adversarial evasion & stress safety tests
 ```
 
 ---
@@ -86,10 +81,13 @@ Deobsucation/
 ### 2.1 Prerequisites
 - Python 3.10, 3.11, or 3.12
 - Windows, macOS, or Linux
-- Optional: Microsoft Word (for compiling DOCX to PDF)
 
-### 2.2 Setup Virtual Environment
+### 2.2 Clone Codebase & Setup Environment
 ```bash
+git clone https://github.com/youwannahackme/Semantic-Deobfuscation.git
+cd Semantic-Deobfuscation
+
+# Create virtual environment
 python -m venv venv
 
 # Windows PowerShell:
@@ -197,26 +195,14 @@ OK
 
 ---
 
-## 7. Regenerating Publication Figures & Manuscripts
+## 7. Research Artifacts & Preprints
 
-To regenerate the publication figures and build the Word and PDF manuscripts:
-
-```bash
-# 1. Regenerate 300 DPI figures dynamically from metrics.json
-python generate_deobfuscation_figures.py
-
-# 2. Build the ACM TOPS Word document and compile to PDF
-python build_deobfuscation_docx.py
-
-# 3. Verify compliance against ACM TOPS submission checklist
-python verify_deobfuscation_checklist.py
-
-# 4. Verify experimental results & zero-leakage guarantees
-python verify_experimental_results.py
-
-# 5. Pack the self-contained reproducibility archive
-python create_reproducibility_package.py
-```
+The full academic publication manuscript and curated artifacts are included directly in the repository:
+- **Publication Manuscript (PDF)**: [manuscripts/Semantic_Deobfuscation_ACM_TOPS_Submission.pdf](manuscripts/Semantic_Deobfuscation_ACM_TOPS_Submission.pdf)
+- **Synchronized Markdown Paper**: [manuscripts/Semantic_Deobfuscation_Research_Paper.md](manuscripts/Semantic_Deobfuscation_Research_Paper.md)
+- **Curated BibTeX Citations (85 Entries)**: [manuscripts/references.bib](manuscripts/references.bib)
+- **Official GitHub Repository**: [https://github.com/youwannahackme/Semantic-Deobfuscation](https://github.com/youwannahackme/Semantic-Deobfuscation)
+- **Official Standalone Release Archive**: [GitHub Releases](https://github.com/youwannahackme/Semantic-Deobfuscation/releases) (`SEMANTIC_DEOBFUSCATION_REPRODUCIBILITY_PACKAGE.zip`)
 
 ---
 
@@ -229,3 +215,16 @@ python create_reproducibility_package.py
 - **Target Venue**: ACM Transactions on Privacy and Security (ACM TOPS)
 - **Year**: 2026
 
+### 8.1 Suggested Citation (BibTeX)
+
+```bibtex
+@article{firdous2026transformer,
+  author    = {Saba Firdous and Shoaib Arshad},
+  title     = {Transformer-Based Semantic Deobfuscation: Using Large Language Models to Reconstruct Behavioral Logic from Obfuscated Malware Scripts},
+  journal   = {ACM Transactions on Privacy and Security},
+  year      = {2026},
+  url       = {https://github.com/youwannahackme/Semantic-Deobfuscation},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA}
+}
+```
