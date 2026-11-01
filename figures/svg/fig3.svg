@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380">
+<defs>
+    <style>
+        .title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #0F172A; }
+        .subtitle { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; fill: #475569; }
+        .box-title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: bold; fill: #1E293B; }
+        .box-sub { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5px; fill: #334155; }
+        .box-code { font-family: 'Courier New', Courier, monospace; font-size: 9px; fill: #0F172A; }
+        .label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; fill: #475569; }
+        .val { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #0F172A; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563EB"/>
+    </marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+
+    <rect x="30" y="40" width="410" height="310" rx="6" fill="#F8FAFC" stroke="#6366F1" stroke-width="1.5"/>
+    <rect x="30" y="40" width="410" height="28" rx="6" fill="#EEF2FF"/>
+    <text x="45" y="58" font-family="Arial" font-size="11" font-weight="bold" fill="#4338CA">Token Attention Weight Matrix α_ij</text>
+    
+    <!-- Token Labels Horizontal -->
+    <text x="145" y="88" class="box-code" font-weight="bold">AllocEx</text>
+    <text x="210" y="88" class="box-code" font-weight="bold">WriteMem</text>
+    <text x="280" y="88" class="box-code" font-weight="bold">CrtThrd</text>
+    <text x="345" y="88" class="box-code" font-weight="bold">$junk_9x</text>
+    
+    <!-- Row 1: VirtualAllocEx -->
+    <text x="45" y="115" class="box-code" font-weight="bold">AllocEx</text>
+    <rect x="140" y="100" width="55" height="25" fill="#4338CA" rx="2"/>
+    <text x="153" y="117" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.92</text>
+    <rect x="205" y="100" width="55" height="25" fill="#6366F1" rx="2"/>
+    <text x="218" y="117" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.88</text>
+    <rect x="275" y="100" width="55" height="25" fill="#818CF8" rx="2"/>
+    <text x="288" y="117" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.79</text>
+    <rect x="340" y="100" width="55" height="25" fill="#EEF2FF" rx="2"/>
+    <text x="353" y="117" font-family="Arial" font-size="9" fill="#4338CA">0.03</text>
+    
+    <!-- Row 2: WriteProcessMemory -->
+    <text x="45" y="150" class="box-code" font-weight="bold">WriteMem</text>
+    <rect x="140" y="135" width="55" height="25" fill="#6366F1" rx="2"/>
+    <text x="153" y="152" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.86</text>
+    <rect x="205" y="135" width="55" height="25" fill="#4338CA" rx="2"/>
+    <text x="218" y="152" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.95</text>
+    <rect x="275" y="135" width="55" height="25" fill="#6366F1" rx="2"/>
+    <text x="288" y="152" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.91</text>
+    <rect x="340" y="135" width="55" height="25" fill="#EEF2FF" rx="2"/>
+    <text x="353" y="152" font-family="Arial" font-size="9" fill="#4338CA">0.02</text>
+    
+    <!-- Row 3: CreateRemoteThread -->
+    <text x="45" y="185" class="box-code" font-weight="bold">CrtThrd</text>
+    <rect x="140" y="170" width="55" height="25" fill="#818CF8" rx="2"/>
+    <text x="153" y="187" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.81</text>
+    <rect x="205" y="170" width="55" height="25" fill="#6366F1" rx="2"/>
+    <text x="218" y="187" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.89</text>
+    <rect x="275" y="170" width="55" height="25" fill="#4338CA" rx="2"/>
+    <text x="288" y="187" font-family="Arial" font-size="9" fill="#FFF" font-weight="bold">0.94</text>
+    <rect x="340" y="170" width="55" height="25" fill="#EEF2FF" rx="2"/>
+    <text x="353" y="187" font-family="Arial" font-size="9" fill="#4338CA">0.04</text>
+
+    <!-- Row 4: $junk_9x (Dead Syntax) -->
+    <text x="45" y="220" class="box-code" font-weight="bold">$junk_9x</text>
+    <rect x="140" y="205" width="55" height="25" fill="#EEF2FF" rx="2"/>
+    <text x="153" y="222" font-family="Arial" font-size="9" fill="#4338CA">0.02</text>
+    <rect x="205" y="205" width="55" height="25" fill="#EEF2FF" rx="2"/>
+    <text x="218" y="222" font-family="Arial" font-size="9" fill="#4338CA">0.04</text>
+    <rect x="275" y="205" width="55" height="25" fill="#EEF2FF" rx="2"/>
+    <text x="288" y="222" font-family="Arial" font-size="9" fill="#4338CA">0.01</text>
+    <rect x="340" y="205" width="55" height="25" fill="#C7D2FE" rx="2"/>
+    <text x="353" y="222" font-family="Arial" font-size="9" fill="#4338CA">0.12</text>
+    
+    <text x="45" y="265" font-family="Arial" font-size="9.5" fill="#475569">Key Insight: Operational API couplings maintain high mutual attention</text>
+    <text x="45" y="282" font-family="Arial" font-size="9.5" fill="#475569">weights (&gt;0.80), bypassing intervening dead variables and NOP sleds.</text>
+    
+    <rect x="470" y="40" width="400" height="310" rx="6" fill="#F8FAFC" stroke="#059669" stroke-width="1.5"/>
+    <rect x="470" y="40" width="400" height="28" rx="6" fill="#D1FAE5"/>
+    <text x="485" y="58" font-family="Arial" font-size="11" font-weight="bold" fill="#065F46">Mathematical Formulation &amp; Evidence Grounding</text>
+    
+    <text x="485" y="90" font-family="Arial" font-size="10.5" font-weight="bold" fill="#0F172A">Scaled Dot-Product Attention Kernel:</text>
+    <rect x="485" y="100" width="370" height="38" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="500" y="124" class="box-code" font-weight="bold" fill="#1E293B">Attention(Q,K,V) = softmax( (Q * K^T) / sqrt(d_k) ) * V</text>
+    
+    <text x="485" y="160" font-family="Arial" font-size="10.5" font-weight="bold" fill="#0F172A">Deterministic Evidence Verification Score:</text>
+    <rect x="485" y="170" width="370" height="38" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="500" y="194" class="box-code" font-weight="bold" fill="#1E293B">C_evid = SUM(w_i * I(api_i in T_ground)) / SUM(w_i)</text>
+    
+    <text x="485" y="232" font-family="Arial" font-size="9.5" fill="#334155">- Q, K, V: Query, Key, Value projection matrices (dim d_k = 128)</text>
+    <text x="485" y="250" font-family="Arial" font-size="9.5" fill="#334155">- w_i: Criticality weight assigned to detected Win32 API primitives</text>
+    <text x="485" y="268" font-family="Arial" font-size="9.5" fill="#334155">- T_ground: Ground-truth normalized token sequence extracted from AST</text>
+    <text x="485" y="286" font-family="Arial" font-size="9.5" font-weight="bold" fill="#059669">- Intercepts model claims and refutes hallucinated APIs deterministically</text>
+    </svg>

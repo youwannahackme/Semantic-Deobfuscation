@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="880" height="360">
+<defs>
+    <style>
+        .title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #0F172A; }
+        .subtitle { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; fill: #475569; }
+        .box-title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: bold; fill: #1E293B; }
+        .box-sub { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5px; fill: #334155; }
+        .box-code { font-family: 'Courier New', Courier, monospace; font-size: 9px; fill: #0F172A; }
+        .label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; fill: #475569; }
+        .val { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #0F172A; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563EB"/>
+    </marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+
+    <rect x="30" y="40" width="480" height="290" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="45" y="66" class="box-title">F1-Score Comparison on Deduplicated Test Set (N = 100)</text>
+    
+    <!-- Bar 1: Proposed Pipeline -->
+    <text x="45" y="95" class="label" font-weight="bold">Proposed Architecture (Full Pipeline)</text>
+    <rect x="45" y="103" width="440" height="22" rx="3" fill="#E2E8F0"/>
+    <rect x="45" y="103" width="393.36000000000007" height="22" rx="3" fill="#10B981"/>
+    <text x="465" y="118" class="val" fill="#047857">89.4%</text>
+    
+    <!-- Bar 2: Heuristic Signatures -->
+    <text x="45" y="142" class="label" font-weight="bold">Heuristic Rule-Based Signatures</text>
+    <rect x="45" y="150" width="440" height="22" rx="3" fill="#E2E8F0"/>
+    <rect x="45" y="150" width="389.40000000000003" height="22" rx="3" fill="#3B82F6"/>
+    <text x="465" y="165" class="val" fill="#1D4ED8">88.5%</text>
+
+    <!-- Bar 3: TF-IDF + LR -->
+    <text x="45" y="189" class="label" font-weight="bold">TF-IDF + Logistic Regression</text>
+    <rect x="45" y="197" width="440" height="22" rx="3" fill="#E2E8F0"/>
+    <rect x="45" y="197" width="353.76000000000005" height="22" rx="3" fill="#F59E0B"/>
+    <text x="465" y="212" class="val" fill="#B45309">80.4%</text>
+    
+    <!-- Bar 4: Random Forest -->
+    <text x="45" y="236" class="label" font-weight="bold">Random Forest Classifier</text>
+    <rect x="45" y="244" width="440" height="22" rx="3" fill="#E2E8F0"/>
+    <rect x="45" y="244" width="339.68000000000006" height="22" rx="3" fill="#94A3B8"/>
+    <text x="465" y="259" class="val" fill="#475569">77.2%</text>
+
+    <!-- Bar 5: Base LLM -->
+    <text x="45" y="283" class="label" font-weight="bold">Base LLM (Direct Raw Prompt)</text>
+    <rect x="45" y="291" width="440" height="22" rx="3" fill="#E2E8F0"/>
+    <rect x="45" y="291" width="325.16" height="22" rx="3" fill="#8B5CF6"/>
+    <text x="465" y="306" class="val" fill="#6D28D9">73.9%</text>
+    
+    <rect x="530" y="40" width="320" height="290" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+    <text x="545" y="66" font-family="Arial" font-size="12" font-weight="bold" fill="#166534">Empirical Performance Insights</text>
+    
+    <rect x="545" y="85" width="290" height="65" rx="4" fill="#FFFFFF" stroke="#BBF7D0"/>
+    <text x="560" y="108" font-family="Arial" font-size="13" font-weight="bold" fill="#15803D">+15.5% vs Base LLM</text>
+    <text x="560" y="126" font-family="Arial" font-size="9" fill="#166534">AST unwrapping &amp; atomic tokens eliminate</text>
+    <text x="560" y="138" font-family="Arial" font-size="9" fill="#166534">22.0% raw prompt hallucination rate.</text>
+    
+    <rect x="545" y="160" width="290" height="65" rx="4" fill="#FFFFFF" stroke="#BBF7D0"/>
+    <text x="560" y="183" font-family="Arial" font-size="13" font-weight="bold" fill="#15803D">+12.2% vs Random Forest</text>
+    <text x="560" y="201" font-family="Arial" font-size="9" fill="#166534">Semantic reconstruction correctly resolves</text>
+    <text x="560" y="213" font-family="Arial" font-size="9" fill="#166534">multi-layer Base64 &amp; dynamic IEX streams.</text>
+    
+    <rect x="545" y="235" width="290" height="65" rx="4" fill="#FFFFFF" stroke="#BBF7D0"/>
+    <text x="560" y="258" font-family="Arial" font-size="13" font-weight="bold" fill="#15803D">Static Hash Complete Failure</text>
+    <text x="560" y="276" font-family="Arial" font-size="9" fill="#166534">Hash lookup achieved 0.0% recall, proving</text>
+    <text x="560" y="288" font-family="Arial" font-size="9" fill="#166534">static hashes fail on obfuscated payloads.</text>
+    </svg>

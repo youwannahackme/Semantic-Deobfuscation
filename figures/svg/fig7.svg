@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="880" height="380">
+<defs>
+    <style>
+        .title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #0F172A; }
+        .subtitle { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; fill: #475569; }
+        .box-title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: bold; fill: #1E293B; }
+        .box-sub { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5px; fill: #334155; }
+        .box-code { font-family: 'Courier New', Courier, monospace; font-size: 9px; fill: #0F172A; }
+        .label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; fill: #475569; }
+        .val { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #0F172A; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563EB"/>
+    </marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+
+    <rect x="50" y="40" width="380" height="310" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+    <text x="65" y="66" class="box-title">Confusion Matrix: Proposed Pipeline (N = 100)</text>
+    
+    <!-- Column Headers -->
+    <text x="210" y="95" font-family="Arial" font-size="10" font-weight="bold" fill="#0F172A" text-anchor="middle">Pred: Malicious</text>
+    <text x="330" y="95" font-family="Arial" font-size="10" font-weight="bold" fill="#0F172A" text-anchor="middle">Pred: Benign</text>
+    
+    <!-- Row 1: Actual Malicious -->
+    <text x="65" y="145" font-family="Arial" font-size="10" font-weight="bold" fill="#0F172A">Actual: Malicious</text>
+    <rect x="160" y="115" width="100" height="60" fill="#10B981" rx="4"/>
+    <text x="210" y="145" font-family="Arial" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">59</text>
+    <text x="210" y="165" font-family="Arial" font-size="9" fill="#FFF" text-anchor="middle">True Positive (98.3%)</text>
+    
+    <rect x="280" y="115" width="100" height="60" fill="#FEE2E2" stroke="#DC2626" rx="4"/>
+    <text x="330" y="145" font-family="Arial" font-size="18" font-weight="bold" fill="#DC2626" text-anchor="middle">1</text>
+    <text x="330" y="165" font-family="Arial" font-size="9" fill="#DC2626" text-anchor="middle">False Negative (1.7%)</text>
+    
+    <!-- Row 2: Actual Benign -->
+    <text x="65" y="215" font-family="Arial" font-size="10" font-weight="bold" fill="#0F172A">Actual: Benign</text>
+    <rect x="160" y="185" width="100" height="60" fill="#FEF3C7" stroke="#D97706" rx="4"/>
+    <text x="210" y="215" font-family="Arial" font-size="18" font-weight="bold" fill="#D97706" text-anchor="middle">13</text>
+    <text x="210" y="235" font-family="Arial" font-size="9" fill="#D97706" text-anchor="middle">False Positive (32.5%)</text>
+    
+    <rect x="280" y="185" width="100" height="60" fill="#3B82F6" rx="4"/>
+    <text x="330" y="215" font-family="Arial" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">27</text>
+    <text x="330" y="235" font-family="Arial" font-size="9" fill="#FFF" text-anchor="middle">True Negative (67.5%)</text>
+    
+    <text x="65" y="275" font-family="Arial" font-size="9.5" fill="#475569">Precision: 59/(59+13) = 81.9% | Recall: 59/(59+1) = 98.3%</text>
+    <text x="65" y="295" font-family="Arial" font-size="10" font-weight="bold" fill="#0F172A">Overall Accuracy: 86/100 = 86.0% | F1-Score: 89.4%</text>
+    <text x="65" y="315" font-family="Arial" font-size="9" fill="#059669">Strict 0.0% data leakage verified across cryptographic hashes.</text>
+    
+    <rect x="470" y="40" width="370" height="310" rx="6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.2"/>
+    <text x="485" y="66" class="box-title">Stratified Kaggle Test Corpus (N = 100 Samples)</text>
+    
+    <rect x="485" y="85" width="340" height="50" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="495" y="103" font-family="Arial" font-size="9.5" font-weight="bold" fill="#0F172A">1. Process Injection (25 samples / 25.0%):</text>
+    <text x="495" y="119" font-family="Arial" font-size="8.5" fill="#334155">VirtualAlloc, WriteProcessMemory, CreateRemoteThread (100% recall)</text>
+    
+    <rect x="485" y="142" width="340" height="50" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="495" y="160" font-family="Arial" font-size="9.5" font-weight="bold" fill="#0F172A">2. Droppers &amp; Downloaders (15 samples / 15.0%):</text>
+    <text x="495" y="176" font-family="Arial" font-size="8.5" fill="#334155">System.Net.WebClient, DownloadFile, DownloadString staging (100% recall)</text>
+    
+    <rect x="485" y="199" width="340" height="50" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="495" y="217" font-family="Arial" font-size="9.5" font-weight="bold" fill="#0F172A">3. Multi-Layer Base64 &amp; Dynamic IEX (20 samples / 20.0%):</text>
+    <text x="495" y="233" font-family="Arial" font-size="8.5" fill="#334155">Recursive Base64 unwrapping &amp; char array string folding (95% recall)</text>
+    
+    <rect x="485" y="256" width="340" height="50" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="495" y="274" font-family="Arial" font-size="9.5" font-weight="bold" fill="#0F172A">4. Benign Administrative Diagnostics (40 samples / 40.0%):</text>
+    <text x="495" y="290" font-family="Arial" font-size="8.5" fill="#334155">WMI diagnostics, Active Directory, event logs (67.5% specificity)</text>
+    
+    <text x="485" y="332" font-family="Arial" font-size="9" font-weight="bold" fill="#059669">Provenance: MPSD Kaggle Benchmark (2,004 deduplicated unique files).</text>
+    </svg>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+<defs>
+    <style>
+        .title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #0F172A; }
+        .subtitle { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; fill: #475569; }
+        .box-title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: bold; fill: #1E293B; }
+        .box-sub { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5px; fill: #334155; }
+        .box-code { font-family: 'Courier New', Courier, monospace; font-size: 9px; fill: #0F172A; }
+        .label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; fill: #475569; }
+        .val { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #0F172A; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563EB"/>
+    </marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+
+    <!-- Y-Axis Grid Lines & Labels -->
+    <line x1="120" y1="50" x2="840" y2="50" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="80" y="54" class="label">100%</text>
+    
+    <line x1="120" y1="110" x2="840" y2="110" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="85" y="114" class="label">80%</text>
+    
+    <line x1="120" y1="170" x2="840" y2="170" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="85" y="174" class="label">60%</text>
+    
+    <line x1="120" y1="230" x2="840" y2="230" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="85" y="234" class="label">40%</text>
+    
+    <line x1="120" y1="290" x2="840" y2="290" stroke="#0F172A" stroke-width="1.5"/>
+    <text x="85" y="294" class="label">0%</text>
+    
+    <rect x="220" y="325" width="14" height="14" fill="#94A3B8" rx="2"/>
+    <text x="240" y="336" class="label">Signatures</text>
+    
+    <rect x="360" y="325" width="14" height="14" fill="#F59E0B" rx="2"/>
+    <text x="380" y="336" class="label">TF-IDF + LR</text>
+    
+    <rect x="510" y="325" width="14" height="14" fill="#3B82F6" rx="2"/>
+    <text x="530" y="336" class="label">Random Forest</text>
+    
+    <rect x="670" y="325" width="14" height="14" fill="#10B981" rx="2"/>
+    <text x="690" y="336" class="label">Proposed Pipeline</text>
+    <text x="212" y="310" font-family="Arial" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">Accuracy</text>
+            <rect x="160" y="81.20000000000002" width="26" height="208.79999999999998" fill="#94A3B8" rx="2"/>
+            <text x="173.0" y="76.20000000000002" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">87.0%</text>
+            
+            <rect x="190" y="100.4" width="26" height="189.6" fill="#F59E0B" rx="2"/>
+            <text x="203.0" y="95.4" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">79.0%</text>
+            
+            <rect x="220" y="112.4" width="26" height="177.6" fill="#3B82F6" rx="2"/>
+            <text x="233.0" y="107.4" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">74.0%</text>
+            
+            <rect x="250" y="83.6" width="26" height="206.4" fill="#10B981" rx="2"/>
+            <text x="263.0" y="78.6" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">86.0%</text>
+            <text x="392" y="310" font-family="Arial" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">Precision</text>
+            <rect x="340" y="63.68000000000001" width="26" height="226.32" fill="#94A3B8" rx="2"/>
+            <text x="353.0" y="58.68000000000001" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">94.3%</text>
+            
+            <rect x="370" y="70.4" width="26" height="219.6" fill="#F59E0B" rx="2"/>
+            <text x="383.0" y="65.4" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">91.5%</text>
+            
+            <rect x="400" y="94.4" width="26" height="195.6" fill="#3B82F6" rx="2"/>
+            <text x="413.0" y="89.4" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">81.5%</text>
+            
+            <rect x="430" y="93.44" width="26" height="196.56" fill="#10B981" rx="2"/>
+            <text x="443.0" y="88.44" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">81.9%</text>
+            <text x="572" y="310" font-family="Arial" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">Recall</text>
+            <rect x="520" y="90.08000000000001" width="26" height="199.92" fill="#94A3B8" rx="2"/>
+            <text x="533.0" y="85.08000000000001" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">83.3%</text>
+            
+            <rect x="550" y="117.91999999999999" width="26" height="172.08" fill="#F59E0B" rx="2"/>
+            <text x="563.0" y="112.91999999999999" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">71.7%</text>
+            
+            <rect x="580" y="114.08000000000001" width="26" height="175.92" fill="#3B82F6" rx="2"/>
+            <text x="593.0" y="109.08000000000001" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">73.3%</text>
+            
+            <rect x="610" y="54.08000000000001" width="26" height="235.92" fill="#10B981" rx="2"/>
+            <text x="623.0" y="49.08000000000001" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">98.3%</text>
+            <text x="752" y="310" font-family="Arial" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">F1-Score</text>
+            <rect x="700" y="77.6" width="26" height="212.4" fill="#94A3B8" rx="2"/>
+            <text x="713.0" y="72.6" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">88.5%</text>
+            
+            <rect x="730" y="97.03999999999999" width="26" height="192.96" fill="#F59E0B" rx="2"/>
+            <text x="743.0" y="92.03999999999999" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">80.4%</text>
+            
+            <rect x="760" y="104.72" width="26" height="185.28" fill="#3B82F6" rx="2"/>
+            <text x="773.0" y="99.72" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">77.2%</text>
+            
+            <rect x="790" y="75.44" width="26" height="214.56" fill="#10B981" rx="2"/>
+            <text x="803.0" y="70.44" font-family="Arial" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">89.4%</text>
+            </svg>
