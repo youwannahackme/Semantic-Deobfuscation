@@ -1,0 +1,300 @@
+{
+  "evaluation_metadata": {
+    "dataset": "Kaggle MPSD (Malicious PowerShell Script Dataset)",
+    "total_deduplicated_corpus": 2009,
+    "test_set_size": 100,
+    "train_set_size": 1909,
+    "timestamp": "2026-11-01 12:09:52",
+    "authors": [
+      "Saba Firdous",
+      "Shoaib Arshad"
+    ],
+    "emails": [
+      "saba.firdous@riphahfsd.edu.pk",
+      "31973@riphahfsd.edu.pk"
+    ],
+    "institution": "Riphah International University"
+  },
+  "comparative_baselines": [
+    {
+      "model_name": "Static Hash Lookup",
+      "accuracy": 40.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "specificity": 100.0,
+      "mcc": 0.0,
+      "roc_auc": 50.0,
+      "latency_ms": 0.0,
+      "confusion_matrix": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 40,
+        "false_negative": 60
+      }
+    },
+    {
+      "model_name": "Heuristic Signatures",
+      "accuracy": 87.0,
+      "precision": 94.34,
+      "recall": 83.33,
+      "f1_score": 88.5,
+      "specificity": 92.5,
+      "mcc": 0.7444,
+      "roc_auc": 87.92,
+      "latency_ms": 2.1,
+      "confusion_matrix": {
+        "true_positive": 50,
+        "false_positive": 3,
+        "true_negative": 37,
+        "false_negative": 10
+      }
+    },
+    {
+      "model_name": "TF-IDF + Logistic Regression",
+      "accuracy": 79.0,
+      "precision": 91.49,
+      "recall": 71.67,
+      "f1_score": 80.37,
+      "specificity": 90.0,
+      "mcc": 0.6053,
+      "roc_auc": 80.83,
+      "latency_ms": 0.8,
+      "confusion_matrix": {
+        "true_positive": 43,
+        "false_positive": 4,
+        "true_negative": 36,
+        "false_negative": 17
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "accuracy": 74.0,
+      "precision": 81.48,
+      "recall": 73.33,
+      "f1_score": 77.19,
+      "specificity": 75.0,
+      "mcc": 0.4751,
+      "roc_auc": 74.17,
+      "latency_ms": 0.9,
+      "confusion_matrix": {
+        "true_positive": 44,
+        "false_positive": 10,
+        "true_negative": 30,
+        "false_negative": 16
+      }
+    },
+    {
+      "model_name": "Base LLM (Direct Raw Prompt)",
+      "accuracy": 71.0,
+      "precision": 80.39,
+      "recall": 68.33,
+      "f1_score": 73.87,
+      "specificity": 75.0,
+      "mcc": 0.4247,
+      "roc_auc": 71.67,
+      "latency_ms": 0.37,
+      "confusion_matrix": {
+        "true_positive": 41,
+        "false_positive": 10,
+        "true_negative": 30,
+        "false_negative": 19
+      },
+      "hallucination_rate_pct": 22.0
+    },
+    {
+      "model_name": "Proposed Architecture (Full Pipeline)",
+      "accuracy": 86.0,
+      "precision": 81.94,
+      "recall": 98.33,
+      "f1_score": 89.39,
+      "specificity": 67.5,
+      "mcc": 0.7183,
+      "roc_auc": 82.92,
+      "latency_ms": 13.55,
+      "confusion_matrix": {
+        "true_positive": 59,
+        "false_positive": 13,
+        "true_negative": 27,
+        "false_negative": 1
+      },
+      "stage_latencies_ms": {
+        "stage1_ingest_ms": 0.12,
+        "stage1_preprocess_ms": 7.27,
+        "stage2_tokenize_ms": 4.88,
+        "stage3_semantic_ms": 0.45,
+        "stage4_verify_ms": 0.83,
+        "total_wall_clock_ms": 13.55
+      },
+      "hallucinations_eliminated_count": 0,
+      "grounding_fidelity_pct": 100.0
+    }
+  ],
+  "ablation_study": [
+    {
+      "model_name": "C1: Base LLM (Direct Raw Prompt)",
+      "accuracy": 71.0,
+      "precision": 80.39,
+      "recall": 68.33,
+      "f1_score": 73.87,
+      "specificity": 75.0,
+      "mcc": 0.4247,
+      "roc_auc": 71.67,
+      "latency_ms": 0.06,
+      "confusion_matrix": {
+        "true_positive": 41,
+        "false_positive": 10,
+        "true_negative": 30,
+        "false_negative": 19
+      }
+    },
+    {
+      "model_name": "C2: + Atomic Win32 API Preservation",
+      "accuracy": 76.0,
+      "precision": 84.62,
+      "recall": 73.33,
+      "f1_score": 78.57,
+      "specificity": 80.0,
+      "mcc": 0.523,
+      "roc_auc": 76.67,
+      "latency_ms": 5.77,
+      "confusion_matrix": {
+        "true_positive": 44,
+        "false_positive": 8,
+        "true_negative": 32,
+        "false_negative": 16
+      }
+    },
+    {
+      "model_name": "C3: + Sliding-Window Context Chunking",
+      "accuracy": 81.0,
+      "precision": 85.96,
+      "recall": 81.67,
+      "f1_score": 83.76,
+      "specificity": 80.0,
+      "mcc": 0.6102,
+      "roc_auc": 80.83,
+      "latency_ms": 6.15,
+      "confusion_matrix": {
+        "true_positive": 49,
+        "false_positive": 8,
+        "true_negative": 32,
+        "false_negative": 11
+      }
+    },
+    {
+      "model_name": "C4: + AST Deobfuscation (Unwrapped)",
+      "accuracy": 85.0,
+      "precision": 82.61,
+      "recall": 95.0,
+      "f1_score": 88.37,
+      "specificity": 70.0,
+      "mcc": 0.6885,
+      "roc_auc": 82.5,
+      "latency_ms": 19.12,
+      "confusion_matrix": {
+        "true_positive": 57,
+        "false_positive": 12,
+        "true_negative": 28,
+        "false_negative": 3
+      }
+    },
+    {
+      "model_name": "C5: Full Proposed Architecture (All Modules)",
+      "accuracy": 86.0,
+      "precision": 81.94,
+      "recall": 98.33,
+      "f1_score": 89.39,
+      "specificity": 67.5,
+      "mcc": 0.7183,
+      "roc_auc": 82.92,
+      "latency_ms": 10.97,
+      "confusion_matrix": {
+        "true_positive": 59,
+        "false_positive": 13,
+        "true_negative": 27,
+        "false_negative": 1
+      }
+    }
+  ],
+  "mcnemar_statistical_significance": {
+    "Static Hash Lookup": {
+      "verdict_discordance": {
+        "b_prop1_base0": 72,
+        "c_prop0_base1": 0,
+        "chi2_continuity_corrected": 70.01,
+        "p_value": 5.88884e-17
+      },
+      "accuracy_discordance": {
+        "b_prop_correct_base_wrong": 59,
+        "c_prop_wrong_base_correct": 13,
+        "chi2_continuity_corrected": 28.12,
+        "p_value": 1.13727e-07
+      }
+    },
+    "Heuristic Signatures": {
+      "verdict_discordance": {
+        "b_prop1_base0": 20,
+        "c_prop0_base1": 1,
+        "chi2_continuity_corrected": 15.43,
+        "p_value": 8.5683e-05
+      },
+      "accuracy_discordance": {
+        "b_prop_correct_base_wrong": 10,
+        "c_prop_wrong_base_correct": 11,
+        "chi2_continuity_corrected": 0.0,
+        "p_value": 1.0
+      }
+    },
+    "TF-IDF + Logistic Regression": {
+      "verdict_discordance": {
+        "b_prop1_base0": 29,
+        "c_prop0_base1": 4,
+        "chi2_continuity_corrected": 17.45,
+        "p_value": 2.9426e-05
+      },
+      "accuracy_discordance": {
+        "b_prop_correct_base_wrong": 20,
+        "c_prop_wrong_base_correct": 13,
+        "chi2_continuity_corrected": 1.09,
+        "p_value": 0.29627
+      }
+    },
+    "Random Forest": {
+      "verdict_discordance": {
+        "b_prop1_base0": 28,
+        "c_prop0_base1": 10,
+        "chi2_continuity_corrected": 7.61,
+        "p_value": 0.00581982
+      },
+      "accuracy_discordance": {
+        "b_prop_correct_base_wrong": 25,
+        "c_prop_wrong_base_correct": 13,
+        "chi2_continuity_corrected": 3.18,
+        "p_value": 0.0743529
+      }
+    },
+    "Base LLM (Direct Raw Prompt)": {
+      "verdict_discordance": {
+        "b_prop1_base0": 26,
+        "c_prop0_base1": 5,
+        "chi2_continuity_corrected": 12.9,
+        "p_value": 0.000328016
+      },
+      "accuracy_discordance": {
+        "b_prop_correct_base_wrong": 23,
+        "c_prop_wrong_base_correct": 8,
+        "chi2_continuity_corrected": 6.32,
+        "p_value": 0.011921
+      }
+    }
+  },
+  "pipeline_latency_profile_ms": {
+    "stage1_ingest_ms": 0.12,
+    "stage1_preprocess_ms": 7.27,
+    "stage2_tokenize_ms": 4.88,
+    "stage3_semantic_ms": 0.45,
+    "stage4_verify_ms": 0.83,
+    "total_wall_clock_ms": 13.55
+  }
+}

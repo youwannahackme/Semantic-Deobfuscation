@@ -1,0 +1,32 @@
+# ==============================================================================
+# Research Prototype Dependencies
+# Paper: Transformer-Based Semantic Deobfuscation
+# Target Venue: ACM Transactions on Privacy and Security (ACM TOPS)
+# ==============================================================================
+
+# Core Scientific & Data Processing
+numpy>=1.23.0
+pandas>=1.5.0
+scipy>=1.10.0
+scikit-learn>=1.1.0
+
+# Deep Learning & Transformer Inference (Local / Remote)
+torch>=2.0.0
+transformers>=4.40.0
+accelerate>=0.28.0
+tokenizers>=0.19.0
+requests>=2.28.0
+
+# Document & PDF Generation
+python-docx>=0.8.11
+pymupdf>=1.23.0
+
+# Visualization & Plotting
+matplotlib>=3.6.0
+
+# Testing & Verification
+pytest>=7.0.0
+
+# Optional: Kaggle API Client (for automated dataset synchronization)
+kaggle>=1.5.12
+
