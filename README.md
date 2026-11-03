@@ -211,6 +211,7 @@ The full academic publication manuscript and curated artifacts are included dire
 - **Authors**:
   - **Saba Firdous\*** (`saba.firdous@riphahfsd.edu.pk`) - *First & Corresponding Author*
   - **Shoaib Arshad** (`31973@riphahfsd.edu.pk`) - *Second Author*
+  - **Zunair-Ul-Abiden** (`31576@riphahfsd.edu.pk`) - *Third Author*
 - **Affiliation**: Department of Computing, Riphah International University, Faisalabad, Pakistan
 - **Target Venue**: ACM Transactions on Privacy and Security (ACM TOPS)
 - **Year**: 2026
@@ -219,7 +220,7 @@ The full academic publication manuscript and curated artifacts are included dire
 
 ```bibtex
 @article{firdous2026transformer,
-  author    = {Saba Firdous and Shoaib Arshad},
+  author    = {Saba Firdous and Shoaib Arshad and Zunair-Ul-Abiden},
   title     = {Transformer-Based Semantic Deobfuscation: Using Large Language Models to Reconstruct Behavioral Logic from Obfuscated Malware Scripts},
   journal   = {ACM Transactions on Privacy and Security},
   year      = {2026},
